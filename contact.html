@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Dekake Solomon</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="portfo.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-section">
+        <h2 class="header">Contact Me</h2>
+
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p class="info-item"><i class="fas fa-phone"></i> +251992024617</p>
+                <p class="info-item"><i class="fas fa-envelope"></i> dakewomaking@gmail.com</p>
+                <p class="info-item"><i class="fas fa-map-marker-alt"></i> Ethiopia</p>
+            </div>
+
+            <form id="contact-form" class="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Message..." required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-columns">
+
+                <!-- Column 1 -->
+                <div class="footer-about">
+                    <h3>Dekake</h3>
+                    <p> Front End developer | Computer Science Student</p>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer-links">
+                    <h3 class="">All at one</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer-social">
+                    <h3>Contact me with social media</h3>
+                    <div class="icons">
+                        <a href="https://github.com/dakewomaking-stack" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://t.me/Dake_AZ" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://web.facebook.com/dekake.jekale/" target="_blank"><i class="fab fa-facebook-f "></i></a>
+                        <a href="https://www.tiktok.com/@dekaka_kina" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="footer-copy ">© 2025 Dekake. All rights reserved.</p>
+
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("WkGKtFRG5BAMBNcDi");
+
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const params = {
+                name: name.value,
+                email: email.value,
+                message: message.value
+            };
+
+            emailjs.send("service_3md0dcu", "template_j84sdhb", params)
+                .then(() => {
+                    alert("Message sent successfully!");
+                    document.getElementById("contact-form").reset();
+                })
+                .catch((err) => alert("Failed: " + err));
+        });
+    </script>
+
+</body>
+
+</html>
