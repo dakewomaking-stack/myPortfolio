@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Dekake Solomon</title>
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="portfo.css">
 </head>
 
 <body>
+
+    <!-- HAMBURGER -->
+    <div class="menu-btn">☰</div>
 
     <nav>
         <ul>
@@ -24,11 +26,9 @@
     </nav>
 
     <section class="section-box">
-        <h2 class="header"> My Projects</h2>
+        <h2 class="header">My Projects</h2>
 
-        <!-- First Grid -->
         <div class="project-grid grid-one">
-
             <div class="project">
                 <h3>High School Student Registration</h3>
                 <p>A simple registration system for students to enroll in school.</p>
@@ -39,15 +39,12 @@
             <div class="project">
                 <h3>Portfolio Website</h3>
                 <p>My personal portfolio website.</p>
-                <p><strong>Tools:</strong> HTML, CSS and JavaScript</p>
+                <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
                 <a href="https://github.com/dakewomaking-stack/myPortfolio" target="_blank">View on GitHub</a>
             </div>
-
         </div>
 
-        <!-- Second Grid -->
         <div class="project-grid grid-two">
-
             <div class="project">
                 <h3>Simple Calculator</h3>
                 <p>A calculator using DOM manipulation.</p>
@@ -57,11 +54,10 @@
 
             <div class="project">
                 <h3>Online Shopping System</h3>
-                <p>A system that allows users to browse and purchase products online.</p>
-                <p><strong>Tools:</strong> Java and MySQL</p>
+                <p>A system that lets users browse and purchase products online.</p>
+                <p><strong>Tools:</strong> Java & MySQL</p>
                 <a href="https://github.com/dakewomaking-stack/Online-Shopping-System-" target="_blank">View on GitHub</a>
             </div>
-
         </div>
     </section>
 
@@ -70,13 +66,11 @@
 
             <div class="footer-columns">
 
-                <!-- Column 1 -->
                 <div class="footer-about">
                     <h3>Dekake</h3>
-                    <p> Front End developer | Computer Science Student</p>
+                    <p>Front End developer | Computer Science Student</p>
                 </div>
 
-                <!-- Column 2 -->
                 <div class="footer-links">
                     <h3>All at one</h3>
                     <ul>
@@ -88,13 +82,12 @@
                     </ul>
                 </div>
 
-                <!-- Column 3 -->
                 <div class="footer-social">
                     <h3>Contact me with social media</h3>
                     <div class="icons">
                         <a href="https://github.com/dakewomaking-stack" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://t.me/Dake_AZ" target="_blank"><i class="fab fa-telegram"></i></a>
-                        <a href="https://web.facebook.com/dekake.jekale/" target="_blank"><i class="fab fa-facebook-f "></i></a>
+                        <a href="https://web.facebook.com/dekake.jekale/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.tiktok.com/@dekaka_kina" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
@@ -103,16 +96,26 @@
 
             <hr>
 
-            <p class="footer-copy ">© 2025 Dekake. All rights reserved.</p>
+            <p class="footer-copy">© 2025 Dekake. All rights reserved.</p>
 
         </div>
     </footer>
 
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const navList = document.querySelector("nav ul");
 
+        menuBtn.addEventListener("click", () => {
+            navList.classList.toggle("show-menu");
+        });
 
-
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            link.addEventListener("click", () => {
+                navList.classList.remove("show-menu");
+            });
+        });
+    </script>
 
 </body>
 
 </html>
-
