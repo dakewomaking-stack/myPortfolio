@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <!-- HAMBURGER -->
+    <div class="menu-btn">☰</div>
 
     <nav>
         <ul>
@@ -119,8 +121,20 @@
 
         </div>
     </footer>
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const navList = document.querySelector("nav ul");
 
+        menuBtn.addEventListener("click", () => {
+            navList.classList.toggle("show-menu");
+        });
+
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            link.addEventListener("click", () => {
+                navList.classList.remove("show-menu");
+            });
+        });
+    </script>
 </body>
 
 </html>
-
