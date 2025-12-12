@@ -11,10 +11,12 @@
 
 <body>
 
-
+    <!-- HAMBURGER BUTTON (LEFT SIDE) -->
+    <div class="menu-btn">
+        ☰
+    </div>
 
     <nav>
-
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -23,40 +25,36 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <img src="dakep.png" alt="Dekake Solomon" class="profile-photo">
+
+    <img src="dakep.PNG" alt="Dekake Solomon" class="profile-photo">
     <h1 class="typing-text">Hello I'm, Dekake Solomon</h1>
-
-
-
 
     <section class="section-box">
         <h2 class="home_h2">Welcome</h2>
         <p class="home_para">Explore my portfolio to learn more about me, my skills, and my projects.</p>
     </section>
+
     <footer>
         <div class="footer-container">
 
             <div class="footer-columns">
 
-                <!-- Column 1 -->
                 <div class="footer-about">
                     <h3>Dekake</h3>
-                    <p> Front End developer | Computer Science Student</p>
+                    <p>Front End developer | Computer Science Student</p>
                 </div>
 
-                <!-- Column 2 -->
                 <div class="footer-links">
                     <h3>All at one</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="skills.html">Skills</a></li>
-                        <li><a href="projects.html" class="active">Projects</a></li>
+                        <li><a href="projects.html">Projects</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3 -->
                 <div class="footer-social">
                     <h3>Contact me with social media</h3>
                     <div class="icons">
@@ -71,18 +69,28 @@
 
             <hr>
 
-            <p class="footer-copy ">© 2025 Dekake. All rights reserved.</p>
+            <p class="footer-copy">© 2025 Dekake. All rights reserved.</p>
 
         </div>
     </footer>
 
+    <!-- NAV TOGGLE SCRIPT -->
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const navList = document.querySelector("nav ul");
 
+        menuBtn.addEventListener("click", () => {
+            navList.classList.toggle("show-menu");
+        });
 
-
-
+        // Close menu after clicking a link
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            link.addEventListener("click", () => {
+                navList.classList.remove("show-menu");
+            });
+        });
+    </script>
 
 </body>
 
 </html>
-
-
