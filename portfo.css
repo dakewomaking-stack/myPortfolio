@@ -165,7 +165,7 @@ nav ul li a.active {
     padding: 30px;
     border-radius: 15px;
     backdrop-filter: blur(4px);
-    transition: 0.3s;
+    
 }
 
 .section-box:hover {
@@ -599,3 +599,4 @@ footer hr {
         width: 95%;
     }
 }
+
