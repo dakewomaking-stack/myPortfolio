@@ -22,7 +22,6 @@ body {
     height: 140px;
     border-radius: 50%;
     border: 4px solid #fff;
-    transition: 0.1s;
     box-shadow: 0 0 20px cyan;
     display: block;
     margin: 20px auto 0;
